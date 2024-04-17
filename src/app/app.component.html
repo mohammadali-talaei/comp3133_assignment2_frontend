@@ -1,0 +1,17 @@
+<div class="w-screen container mx-auto py-4 flex justify-between items-center">
+  <a href="/" class="logo">{{ title }}</a>
+  <div class="nav-links">
+    @if(login!== 'Sucessful'){
+      <a href="/login">Login</a>
+      <a href="/register">Register</a>
+    }@else{
+      <button class="bg-indigo-600 text-white px-3 py-1 rounded-xl" (click)="logout()">logout</button>
+    }
+  </div>
+</div>
+
+<section class="bg-gray-50 h-screen py-8">
+  <div class="container mx-auto">
+    <router-outlet />
+  </div>
+</section>

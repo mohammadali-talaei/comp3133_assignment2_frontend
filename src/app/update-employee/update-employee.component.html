@@ -1,0 +1,201 @@
+<!-- <div class="container">
+  <h2>Modify Employee</h2>
+  <form class="form">
+    <div class="form-group">
+      <label for="firstName">First Name:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="firstName"
+        value="{{ data.first_name }}"
+        name="firstName"
+        #firstname
+        ngModel
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last Name:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="lastName"
+        value="{{ data.last_name }}"
+        name="lastName"
+        #lastname
+        ngModel
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        value="{{ data.email }}"
+        name="email"
+        #email
+        ngModel
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="gender">Gender:</label>
+      <select
+        class="form-control"
+        id="gender"
+        name="gender"
+        #gender
+        ngModel
+        required
+      >
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="salary">Salary:</label>
+      <input
+        type="number"
+        class="form-control"
+        id="salary"
+        value="{{ data.salary }}"
+        #salary
+        name="salary"
+        ngModel
+        required
+      />
+      <input
+        class="form-control"
+        id="id"
+        value="{{ data._id }}"
+        #id
+        name="salary"
+        hidden
+      />
+    </div>
+    <button
+      class="btn btn-primary"
+      (click)="
+        updateEmployee(
+          firstname.value,
+          lastname.value,
+          email.value,
+          gender.value,
+          salary.value,
+          id.value
+        )
+      "
+    >
+      Submit
+    </button>
+  </form>
+</div> -->
+
+<div class="flex flex-col items-center justify-center py-2 sm:px-6 lg:px-8">
+  <div class="max-w-md w-full space-y-8">
+    <h2 class="mt-6 text-start text-3xl font-extrabold text-gray-900">
+      Update Employee
+    </h2>
+    <form class="mt-8 space-y-6">
+      <div class="flex flex-col gap-4 rounded-md shadow-sm -space-y-px">
+        <div>
+          <label for="firstName" class="sr-only">First Name</label>
+          <input
+            id="firstName"
+            value="{{ data.first_name }}"
+            name="firstName"
+            #firstname
+            ngModel
+            required
+            class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+            placeholder="First Name"
+          />
+        </div>
+        <div>
+          <label for="lastName" class="sr-only">Last Name</label>
+          <input
+            id="lastName"
+            value="{{ data.last_name }}"
+            name="lastName"
+            #lastname
+            ngModel
+            required
+            class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+            placeholder="Last Name"
+          />
+        </div>
+        <div>
+          <label for="email" class="sr-only">Email</label>
+          <input
+            id="email"
+            value="{{ data.email }}"
+            name="email"
+            #email
+            ngModel
+            required
+            class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+            placeholder="Email"
+          />
+        </div>
+        <div>
+          <label for="gender" class="sr-only">Gender</label>
+          <select
+            id="gender"
+            name="gender"
+            #gender
+            ngModel
+            required
+            class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+          >
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div>
+          <label for="salary" class="sr-only">Salary</label>
+          <input
+            id="salary"
+            value="{{ data.salary }}"
+            #salary
+            name="salary"
+            ngModel
+            required
+            class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+            placeholder="Salary"
+          />
+          <input
+            class="form-control"
+            id="id"
+            value="{{ data._id }}"
+            #id
+            name="salary"
+            hidden
+          />
+        </div>
+      </div>
+
+      <div>
+        <button
+          type="button"
+          (click)="
+            updateEmployee(
+              firstname.value,
+              lastname.value,
+              email.value,
+              gender.value,
+              salary.value,
+              id.value
+            )
+          "
+          class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
